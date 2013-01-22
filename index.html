@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="http://meyerweb.com/eric/tools/css/reset/reset.css">
+  <link rel="stylesheet" type="text/css" href="main.css">
+	<link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,500,600,700,400italic,500italic,600italic' rel='stylesheet' type='text/css'>
+  <title>Guessing Game</title>
+
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script>
+    var answer = Math.floor(Math.random()*100);
+
+    var guess = prompt("Guess a number from 1 to 100","???");
+    function hint(guess) {
+      if (guess === answer) {
+        // return ("Congrats!");
+        $('#answer_hint').html('Congrats!');
+      }
+      else if (guess < answer) {
+        // return ("Too low");
+        $('#answer_hint').html('Too low');
+      }
+      else if (guess > answer) {
+        // return ("Too high");
+        $('#answer_hint').html('Too high');
+      }
+    };
+    // show(hint(guess));
+
+  </script>
+
+</head>
+
+<body>
+
+<div class="wrapper">
+
+<div class="header">
+  <h1> Hot or Cold?</h1>
+</div>
+
+<div class="hidden">
+  <h2>The computer has selected a number!</h2>
+</div>
+
+<div class="guess_box">
+  <div class="guess_box_title">
+    <p>Make your guess now:</p>
+  </div>
+  <form>
+    <input type="text" name="guess" maxlength="3" align="middle">
+  </form>
+<div id="answer_hint">
+
+</div>
+
+</div> <!--guess_box-->
+</div> <!--wrapper-->
+
+
+
+
+</body>
+</html>
