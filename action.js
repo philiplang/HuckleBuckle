@@ -2,7 +2,7 @@ $(document).ready(function(){
     $(".submit").click.hide();
     var answer = Math.floor(Math.random()*100);
 
-    var guess = document.getElementById('guess').value;
+    var guess = $('#guess').val();
     function hint(guess) {
       if (guess === answer) {
         // return ("Congrats!");
