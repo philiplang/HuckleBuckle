@@ -8,8 +8,9 @@
 	<link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,500,600,700,400italic,500italic,600italic' rel='stylesheet' type='text/css'>
   <title>Guessing Game</title>
 
-  <script src="action.js" type="text/javascript"></script>
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script src="action.js" type="text/javascript"></script>
+
   
 
 </head>
@@ -30,15 +31,19 @@
     <div class="guess_box_title">
       <p>Make your guess now:</p>
     </div>
-    <form>
-      <input type="text" name="guess" id="guess" maxlength="3">
-      <input type="submit" id="submit">
-    </form>
-  <div id="answer_hint">
+      <input type="text" name="guess" id="guess" maxlength="3"  autocomplete="off">
+      <input type="submit" name="submit" id="submit">
+    <div id="answer_hint">
+    </div>
+  </div> <!--guess_box-->
 
-</div>
+  <div class="button_cont">
+    <button name="newgame" id="newgame" class="button">New Game!</button>
+  </div>
+  <div class="button_cont">
+    <button name="cheat" id="cheat" class="button red">Cheat</button>
+  </div>
 
-</div> <!--guess_box-->
 </div> <!--wrapper-->
 
 
