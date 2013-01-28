@@ -46,7 +46,7 @@ $(function (){
           hotOrCold(prev_distance, distance);
         }
         prev_distance = distance;
-        tries = tries + 1;
+        
       }
       
 
@@ -61,6 +61,7 @@ $(function (){
         console.log("Too high");
         $('#answer_hint').html('Too high').css({color:'#000'}).effect("pulsate", {times:2}, 200);
       }
+      tries = tries + 1;
     }
 
     function hotOrCold (prev_distance, distance){
@@ -70,7 +71,7 @@ $(function (){
       else if (prev_distance < distance){
         $('#answer_hint').html('Brrr... Colder').css({color:'#000'}).effect("pulsate", {times:2}, 200);
       }
-
+      tries = tries + 1;
     }
 
     $('#newgame').click(function(e){
