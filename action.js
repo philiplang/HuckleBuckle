@@ -8,6 +8,7 @@ $(function (){
     console.log(answer);
     var t = null;
     var prev_distance = null;
+    var tries = 1
 
     function hint() {   
   
@@ -37,7 +38,7 @@ $(function (){
 
         if (guess == answer) {
           console.log("Congrats");
-          $('#answer_hint').html('Congrats!').css({color:'#000'});
+          $('#answer_hint').html('Congrats - '+tries+' Guesses!').css({'color':'#000', 'font-weight':'bold'}).effect("pulsate", {times:10}, 100);
         }
         else if (prev_distance == null) {
           firstGuess(guess, answer);    
@@ -45,29 +46,29 @@ $(function (){
           hotOrCold(prev_distance, distance);
         }
         prev_distance = distance;
+        tries = tries + 1;
       }
-
       
 
     function firstGuess (guess, answer){
       if (guess < answer) {
         // return ("Too low");
         console.log("Too Low");
-        $('#answer_hint').html('Too low').css({color:'#000'});
+        $('#answer_hint').html('Too low').css({color:'#000'}).effect("pulsate", {times:2}, 200);
       }
       else if (guess > answer) {
         // return ("Too high");
         console.log("Too high");
-        $('#answer_hint').html('Too high').css({color:'#000'});
+        $('#answer_hint').html('Too high').css({color:'#000'}).effect("pulsate", {times:2}, 200);
       }
     }
 
     function hotOrCold (prev_distance, distance){
       if (prev_distance > distance){
-        $('#answer_hint').html('Getting Warmer').css({color:'#000'});
+        $('#answer_hint').html('Getting Warmer').css({color:'#000'}).effect("pulsate", {times:2}, 200);
       } 
       else if (prev_distance < distance){
-        $('#answer_hint').html('Brrr... Colder').css({color:'#000'});
+        $('#answer_hint').html('Brrr... Colder').css({color:'#000'}).effect("pulsate", {times:2}, 200);
       }
 
     }

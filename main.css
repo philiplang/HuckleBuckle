@@ -12,6 +12,17 @@ h1 {
 	font-size: 40px;
 	font-weight: 600;
 	color: #111;
+	
+}
+
+.hot {
+	color: #ff2424;
+	text-shadow: 0 0 1px #600f0f, 0px -5px 6px #b81616;
+}
+
+.cold {
+	color: #87a4db;
+	text-shadow: 0 0 1px #0e3e9e, 0px 5px 6px #7099ea;
 }
 
 h2 {
@@ -24,7 +35,8 @@ h2 {
 .wrapper {
 	background: url(img/purty_wood.png);
 	background-repeat: repeat;
-	height: 100%
+	text-align: center;
+	height: 100%;
 }
 
 .hidden {
@@ -98,9 +110,11 @@ h2 {
 	margin-top: 10px;
 }
 
+
 .button_cont {
-	text-align: center;
 	margin-top: 20px;
+	display: inline;
+	padding: 8px;
 }
 
 .button {
@@ -116,11 +130,17 @@ h2 {
 	border-radius:5px;
 	border:1px solid #268a16;
 	color:#fafbf9;
-	padding:5px 22px;
+	padding:5px 8px;
 	text-decoration:none;
 	/*text-shadow:1px 1px 0px #a7ea98;*/
 	margin-top: 10px;
 	font-size: 14px;
+	margin: 0 auto;
+	width: 120px;
+}
+
+.button:hover{
+	box-shadow: 0px 0px 8px 4px #97ea88;
 }
 
 .button.red {
@@ -139,3 +159,6 @@ h2 {
 	filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
 }
 
+.button.red:hover{
+	box-shadow: 0px 0px 6px 3px #ff6d6d;
+}
